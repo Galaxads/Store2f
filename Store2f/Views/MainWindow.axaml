@@ -1,0 +1,32 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Store2f.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:Store2f.Views"
+        mc:Ignorable="d" WindowState="Maximized" d:DesignWidth="1920" d:DesignHeight="1080" MaxWidth="1920" MinWidth="1920" MaxHeight="1080" MinHeight="1080"
+        x:Class="Store2f.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Store2f">
+	<Grid>
+		<TextBlock FontSize="20" Width="127" Margin="0,170,0,0" >
+			Авторизация
+		</TextBlock>
+		<TextBlock FontSize="20"  VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0,0,0,379" >
+			Введите логин
+		</TextBlock>
+		<TextBox FontSize="15"  VerticalAlignment="Bottom" Width="170" Watermark="Введите пароль" HorizontalAlignment="Center" Margin="0,0,0,460" x:Name="Logins">
+		</TextBox>
+		<TextBlock FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0,0,0,50"  >
+			Введите пароль
+		</TextBlock>
+		<TextBox FontSize="15"  VerticalAlignment="Center" Width="170"  HorizontalAlignment="Center" Watermark="Введите логин" Margin="0,0,0,200"  x:Name="Passwords">
+		</TextBox>
+		<Button  Width="55" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0,350,0,0" Click="Authorization">
+			Вход
+		</Button>
+		<TextBlock FontSize="15"  TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30">
+			Для того чтобы воспользоваться магазином надо зайти в аккаунт
+		</TextBlock>
+	</Grid>
+</Window>

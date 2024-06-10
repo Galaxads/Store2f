@@ -1,0 +1,57 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" WindowState="Maximized" d:DesignWidth="1920" d:DesignHeight="1080" MaxWidth="1920" MinWidth="1920" MaxHeight="1080" MinHeight="1080"
+        x:Class="Store2f.Views.Store"
+        Title="Store">
+	<Grid>
+		<StackPanel>
+			
+			<ListBox x:Name="assortment_of_goods" Height="850" Margin="0,250">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<Grid>
+							<StackPanel >								
+								<TextBlock FontWeight="Bold" Text="{Binding Name}" Margin="250,0,0,0" ></TextBlock>
+								<TextBlock Text="{Binding Description }" Margin="250,0,0,0" HorizontalAlignment="Left"   Width="950" Height="160" TextWrapping="Wrap" ></TextBlock>
+								<TextBlock Text="{Binding Manufacturer}" Margin="365,0,0,0" ></TextBlock>
+								<TextBlock Text="{Binding Price}" Margin="290,0,0,0"  ></TextBlock>
+							</StackPanel>
+							<StackPanel>
+								<Image Source="{Binding photo}" HorizontalAlignment="Left" VerticalAlignment="Center"  Height="195" Width="195" ></Image>
+							</StackPanel>
+							<StackPanel VerticalAlignment="Center">
+								<TextBlock Text="{Binding Stock}" Margin="980,0,0,0" HorizontalAlignment="Center" ></TextBlock>
+							</StackPanel>
+							<StackPanel VerticalAlignment="Top">
+								<Button HorizontalAlignment="Right" Margin="0,50,150,0" Click="New_product"  >Редактировать товар</Button>
+							</StackPanel>
+							<StackPanel VerticalAlignment="Top">
+								<Button HorizontalAlignment="Right" Margin="0,90,150,0" Click="New_product"  >Добавить в корзину</Button>
+							</StackPanel>
+							<StackPanel VerticalAlignment="Top">
+								<Button HorizontalAlignment="Right" Margin="0,130,150,0" Click="New_product"  >Удалить товар</Button>
+							</StackPanel>
+							<StackPanel VerticalAlignment="Bottom">
+								<TextBlock  Margin="250,0,0,0"  >Цена:</TextBlock>
+							</StackPanel>
+							<StackPanel VerticalAlignment="Bottom">
+								<TextBlock  Margin="250,0,0,17"  >Производитель:</TextBlock>
+							</StackPanel>
+
+							<StackPanel VerticalAlignment="Center">
+								<TextBlock  Margin="780,0,0,0" HorizontalAlignment="Center" >Количество на складе:</TextBlock>
+							</StackPanel>
+						</Grid>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</StackPanel>
+		<TextBlock HorizontalAlignment="Right" x:Name="UserRole"  Margin="0,10,50,0"></TextBlock>
+		<StackPanel VerticalAlignment="Top">
+			<Button HorizontalAlignment="Right" Margin="0,150,50,0" Click="New_product"  >Добавить товар</Button>
+		</StackPanel>
+
+	</Grid>
+</Window>
